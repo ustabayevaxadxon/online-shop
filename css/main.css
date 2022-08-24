@@ -1,0 +1,1160 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding-top: 32px;
+    background: #121212;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.header__link {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.header-list {
+    width: 474px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__link:hover {
+    color: #d87d4a;
+}
+
+.header-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-list > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: "";
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: "";
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+.header-hr {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    opacity: 0.2;
+}
+
+/* MAIN */
+
+/* HERO SECTION */
+.hero-section {
+    background-image: url("../assets/main/BitmapBody-bg-img.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -96px;
+    height: 635px;
+    padding-top: 128px;
+}
+
+.hero-info {
+    width: 379px;
+}
+
+.hero__text {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.hero__heading {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hero__desc {
+    margin-bottom: 40px;
+    width: 349px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #d87d4a;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hero__btn:hover {
+    background: #fbaf85;
+}
+
+/* CATEGORY SECTION */
+.category-section {
+    padding: 120px 0 168px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-item {
+    background-image: url("../assets/main/Maskli-bg.png");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    padding-bottom: 30px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category__img {
+    margin-bottom: 36px;
+}
+
+.category__heading {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.category__btn {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.category__btn:hover {
+    color: #d87d4a;
+}
+
+/* SPEAKING SECTION */
+.speaker-container {
+    background: #d87d4a;
+    border-radius: 8px;
+    height: 560px;
+}
+
+.speaker-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.speaker-info {
+    margin-bottom: 124px;
+}
+
+.speaker__heading {
+    margin-bottom: 24px;
+    max-width: 261px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.speaker__desc {
+    margin-bottom: 40px;
+    width: 349px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.speaker__btn {
+    display: inline-block;
+    background: #ffffff;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    border: 1px solid black;
+}
+
+.speaker__btn:hover {
+    color: #ffffff;
+    background: #4c4c4c;
+}
+
+/* SPEAKERX7 SECTION */
+.speakerx7-section {
+    padding: 48px 0;
+}
+.speakerx7-container {
+    background-image: url("../assets/main/Bitmapspeaker_zx7.png");
+    background-repeat: no-repeat;
+    height: 320px;
+    display: flex;
+}
+
+.speakerx7-info {
+    padding: 101px 95px;
+}
+
+.speakerx7__heading {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.speakerx7__btn {
+    display: inline-block;
+    background: #ffffff;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    border: 1px solid black;
+}
+
+.speakerx7__btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* EARPHONES CONTAINER */
+.earphones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.earphones-left {
+    background-image: url("../assets/main/BitmapYX!_earphones.png");
+    background-repeat: no-repeat;
+    height: 320px;
+    width: 540px;
+    border-radius: 8px;
+}
+
+.earphones-right {
+    padding: 101px 95px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    width: 540px;
+}
+
+/* AUDIO SECTION */
+.audio-section {
+    padding: 200px 0;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio-info {
+    width: 445px;
+}
+
+.audio__heading {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.audio__span {
+    color: #d87d4a;
+}
+
+.audio__desc {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.audio-img {
+    background-image: url("../assets/main/Bitmapaudio-gear.png");
+    background-repeat: no-repeat;
+    width: 588px;
+    height: 588px;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 75px 0 48px;
+    background: #101010;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-list {
+    margin-bottom: 36px;
+    width: 474px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top__link {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.footer-main-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-main-item-left {
+    width: 49%;
+}
+
+.footer-main-item__desc {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.left-desc {
+    margin-bottom: 56px;
+}
+
+.footer-top__link:hover {
+    color: #d87d4a;
+}
+
+.footer-main-item__link img:hover {
+    background: #d87d4a;
+}
+
+.middle__link {
+    margin: 0 16px;
+}
+@media (max-width: 1083px) {
+    .earphones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .earphones-left {
+        margin-bottom: 40px;
+    }
+
+    .category-list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .category-item {
+        margin-bottom: 40px;
+    }
+
+    .headphones-list,
+    .headphones-item {
+        flex-wrap: wrap;
+    }
+
+    .headphones-item {
+        justify-content: center !important;
+    }
+
+    .headphones-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headphones-info__heading,
+    .headphones-info__desc {
+        text-align: center;
+    }
+
+    .headphones-item-img {
+        margin-bottom: 40px;
+    }
+
+    /* IMAGES SECTION */
+    .images-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly !important;
+    }
+
+    .images-left {
+        flex-direction: row !important;
+        margin-bottom: 40px;
+    }
+
+    .images-left__img {
+        margin-right: 40px;
+    }
+
+    /* BOOK SECTION */
+    .book-list {
+        flex-wrap: wrap;
+        justify-content: space-evenly !important;
+    }
+
+    .book-item {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 929px) {
+    .images-left {
+        flex-direction: column !important;
+        margin: 0;
+    }
+
+    .images-left img {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 auto;
+    }
+    .container {
+        padding: 0 20px;
+        max-width: 729px;
+        margin: 0 auto;
+    }
+
+    .header-container,
+    .header-list {
+        flex-wrap: wrap;
+    }
+
+    /* HERO SECTION */
+
+    .hero-section {
+        background-image: url("../assets/tablet_img/Bitmaptablet-hero-gb.png");
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+
+    .hero-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__text,
+    .hero__heading,
+    .hero__desc {
+        text-align: center;
+    }
+
+    /* CATEGORY SECTION */
+    .category-list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .category-item {
+        width: 223px;
+        margin-bottom: 40px;
+    }
+
+    /* SPEAKER SECTION */
+    .speaker-container {
+        height: 720px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .speaker-container img {
+        width: 198px;
+        margin-bottom: 64px;
+        margin-top: 52px;
+    }
+
+    .speaker-info {
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speaker__heading,
+    .speaker__desc {
+        text-align: center;
+    }
+
+    /* SPEAKINGX7 SECTION */
+    .speakerx7-container {
+        background-image: url("../assets/tablet_img/Bitmapspeaker-bg.png");
+    }
+
+    /* EARPHONES SECTION */
+    .earphones-container {
+        flex-direction: row;
+    }
+
+    .earphones-left {
+        margin: 0;
+        height: 320px;
+        width: 339px;
+        background-image: url("../assets/tablet_img/Bitmapearphone-bg.png");
+    }
+
+    .earphones-right {
+        height: 320px;
+        width: 339px;
+        padding: 101px 41px;
+    }
+
+    /* AUDIO SECTION */
+    .audio-container {
+        flex-direction: column-reverse;
+    }
+
+    .audio-img {
+        background-image: url("../assets/tablet_img/Bitmapaudio-gear-tablet.png");
+        max-width: 660px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 63px;
+    }
+
+    .audio-info {
+        max-width: 573px;
+        width: 100%;
+    }
+
+    .audio__heading,
+    .audio__desc {
+        text-align: center;
+    }
+
+    /* FOOTER */
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-top-list {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer__logo {
+        margin-bottom: 32px;
+    }
+
+    .footer-main-list {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .footer-main-item-left {
+        max-width: 689px;
+        width: 100%;
+    }
+
+    .footer-main-item {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    /* HEADPHONES */
+    .headphones-item {
+        margin-bottom: 52px !important;
+    }
+
+    .headphones-info {
+        max-width: 572px !important;
+        width: 100% !important;
+    }
+
+    .headphones-item-img {
+        max-width: 689px;
+        width: 100%;
+        height: 352px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .headphones-item-img img {
+        width: 220px;
+        height: 243px;
+    }
+
+    .headphones-category-container {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+
+    .audio-category-section {
+        padding-top: 80px;
+    }
+
+    /* DEATILS CONTAINER */
+    .details-list,
+    .details-item {
+        flex-wrap: nowrap !important;
+    }
+
+    .details-item {
+        height: 390px;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .details-item-img {
+        max-width: 281px;
+        height: 480px;
+    }
+
+    .details-info {
+        max-width: 339px !important;
+        width: 100% !important;
+        align-items: flex-start;
+    }
+
+    .details-info__heading,
+    .details-info__desc {
+        text-align: left;
+    }
+
+    .details-info__heading {
+        font-size: 28px !important;
+        line-height: 32px !important;
+    }
+
+    .btn-box {
+        display: flex;
+    }
+    /* FEATURE SECTION */
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-left {
+        margin-bottom: 120px;
+        max-width: 689px !important;
+        width: 100% !important;
+    }
+
+    .feature-right {
+        max-width: 539px !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* IMAGES SECTION */
+    .images-container {
+        flex-direction: row !important;
+        flex-wrap: initial;
+        justify-content: space-between !important;
+    }
+
+    .images-left img {
+        margin: 0;
+    }
+
+    .images-left img {
+        width: 277px;
+        height: 174px;
+    }
+
+    .images-right img {
+        width: 395px;
+        height: 368px;
+    }
+
+    /* BOOK SECTION  */
+
+    .book-list {
+        flex-wrap: nowrap;
+        flex-direction: row !important;
+    }
+
+    .book-item {
+        max-width: 223px !important;
+        width: 100%;
+    }
+
+    .book-item img {
+        /* height: 318px !important; */
+        width: 223px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .header-list {
+        position: absolute;
+        top: 0;
+        margin-top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ .header-list li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .header-list li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .header-list > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+    .header-list > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+@media (max-width: 718px) {
+    .earphones-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .earphones-left {
+        margin-bottom: 40px;
+    }
+
+    .details-section {
+        padding-bottom: 260px;
+    }
+
+    .details-list,
+    .details-item {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .details-info {
+        align-items: center !important;
+    }
+
+    .details-info__heading,
+    .details-info__desc {
+        text-align: center;
+    }
+
+    .details-item-img {
+        max-width: 717px;
+        width: 100%;
+        height: 352px;
+    }
+
+    .headphones-info {
+        max-width: 572px !important;
+        width: 100% !important;
+    }
+
+    .images-left {
+        flex-direction: column !important;
+        margin-bottom: 40px;
+    }
+
+    .images-container {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .images-left img {
+        margin-bottom: 40px;
+    }
+
+    .images-left__img {
+        margin-right: 40px;
+    }
+
+    .book-list {
+        flex-wrap: wrap !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .footer-top {
+        align-items: center;
+    }
+
+    .footer-top-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top-item {
+        margin-bottom: 24px;
+    }
+
+    .footer-main-list {
+        align-items: center;
+    }
+
+    .footer-main-item-left {
+        margin-bottom: 48px;
+    }
+
+    .footer-main-item__desc {
+        text-align: center;
+    }
+
+    .footer-main-item {
+        position: initial;
+    }
+
+    .feature-right {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .btn-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        margin: 0 auto;
+    }
+    .container {
+        padding: 0 20px;
+        max-width: 367px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* HERO SECTION */
+
+    .hero-section {
+        background-image: url("../assets/mobile/Bitmaphero-mobile.png");
+    }
+
+    .hero-info {
+        max-width: 328px;
+        width: 100%;
+    }
+
+    .hero__heading {
+        font-size: 36px;
+    }
+
+    .hero__desc {
+        max-width: 328px;
+        width: 100%;
+    }
+
+    /* CATEGORY SECTION */
+    .category-item {
+        max-width: 327px;
+        width: 100%;
+    }
+
+    /* SPEAKER SECTION */
+    .speaker-container img {
+        width: 172px;
+    }
+
+    .speaker-info,
+    .speaker__desc {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .speaker__heading {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    /* SPEAKINGX7 SECTION */
+    .speakerx7-container {
+        background-image: url("../assets/mobile/Bitmapzx7-speaker-mobile-bg.png");
+    }
+
+    .speakerx7-info {
+        padding: 101px 24px;
+    }
+
+    /* EARPHONES SECTION */
+    .earphones-container {
+        flex-direction: column;
+    }
+
+    .earphones-left {
+        margin-bottom: 24px;
+        height: 200px;
+        max-width: 327px;
+        width: 100%;
+        background-image: url("../assets/mobile/Group\ 12earphone-mobile.png");
+    }
+
+    .earphones-right {
+        height: 200px;
+        max-width: 327px;
+        width: 100%;
+        padding: 41px 24px;
+    }
+
+    /* AUDIO SECTION */
+    .audio-img {
+        background-image: url("../assets/mobile/Bitmapaudio-mobile.png");
+        max-width: 327px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .audio__heading {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    /* FOOTER */
+    .footer-top {
+        align-items: center;
+    }
+
+    .footer-top-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top-item {
+        margin-bottom: 24px;
+    }
+
+    .footer-main-list {
+        align-items: center;
+    }
+
+    .footer-main-item-left {
+        margin-bottom: 48px;
+    }
+
+    .footer-main-item__desc {
+        text-align: center;
+    }
+
+    .footer-main-item {
+        position: initial;
+    }
+
+    /* HEADPHONES PART */
+    .headphones-section {
+        padding: 32px 0 !important;
+    }
+
+    .headphones__heading {
+        font-size: 28px !important;
+        line-height: 38px !important;
+    }
+
+    .headphones-container {
+        padding-top: 64px !important;
+    }
+
+    .headphones-item-img {
+        width: 327px !important;
+        height: 352px !important;
+    }
+
+    .headphones-item-img img {
+        width: 220px;
+        height: 243px;
+    }
+
+    .headphones-info__heading {
+        font-size: 28px !important;
+        line-height: 38px !important;
+        width: 100% !important;
+    }
+
+    .details-info {
+        align-items: flex-start !important;
+    }
+
+    .details-info__heading,
+    .details-info__desc {
+        text-align: left;
+    }
+
+    .feature-section {
+        padding-top: 260px !important;
+    }
+
+    .feature-section {
+        padding: 0 !important;
+        padding-top: 200px !important;
+    }
+
+    .images-section {
+        padding-top: 88px;
+    }
+
+    .images-right img,
+    .images-left img {
+        max-width: 327px !important;
+        width: 100% !important;
+    }
+
+    .book-item {
+        max-width: 327px !important;
+        width: 100% !important;
+    }
+
+    .book-item img {
+        max-width: 327px !important;
+        width: 100%;
+    }
+}
